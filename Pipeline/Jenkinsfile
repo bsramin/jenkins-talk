@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  stages {
+    stage('Cloning SCM') {
+        steps {
+            url: 'https://github.com/bsramin/jenkinst-talk.git'
+        }
+    }
+    stage('Building') {
+        steps {
+            sh 'date'
+        }
+    }
+  }
+}
