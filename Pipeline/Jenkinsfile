@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Cloning SCM') {
         steps {
-            url: 'https://github.com/bsramin/jenkins-talk.git'
+          git branch: 'master',
+          url: 'https://github.com/bsramin/jenkins-talk.git'
         }
     }
     stage('Building') {
